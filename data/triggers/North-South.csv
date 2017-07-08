@@ -1,0 +1,12 @@
+1,BuehlerBuehlerBuehler,TriggerTypeTime,0,500,placeholder,GiveGoldEvent,100
+1,Stacey'sMom,TriggerTypeResource,0,Gold,0,GiveLumberEvent,5
+1,Jim-BobFischer,TriggerTypeResource,0,Lumber,10000,GiveGoldEvent,10000
+1,PhilJackson(KnicksSuck),TriggerTypeLocation,0,50,50,GiveGoldEvent,1000
+1,Aaron,TriggerTypeLocation,1,95,58,HealAssetEvent,95,58,1
+-1,Matteson,TriggerTypeLocation,1,94,58,DamageAssetEvent,94,58,1
+1,JohnWall,TriggerTypeLocation,0,93,55,AddUnitsEvent,93,55,2,2
+1,KyleLowry,TriggerTypeLocation,0,85,55,AddBuildingsEvent,85,55,13,2
+1,SueTheShrew,TriggerTypeAssetObtained,0,2,1,GiveLumberEvent,1000
+1,JohnnyManziel,TriggerTypeAssetLost,0,2,2,GiveGoldEvent,10000
+2,test,TriggerTypeLocation,0,85,55,AddBuildingsEvent,85,55,9,2
+

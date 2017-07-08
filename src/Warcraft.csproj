@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89D9A9F8-49C4-4D25-8DF6-0D38BC33EEDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Warcraft</RootNamespace>
+    <AssemblyName>Warcraft</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ai\Triggers\Trigger.cs" />
+    <Compile Include="Ai\Triggers\TriggerManager.cs" />
+    <Compile Include="App\DataTypes.cs" />
+    <Compile Include="App\Settings.cs" />
+    <Compile Include="Assets\Base\Asset.cs" />
+    <Compile Include="Assets\CursorSet.cs" />
+    <Compile Include="Assets\DecoratedMap.cs" />
+    <Compile Include="Assets\FontTileset.cs" />
+    <Compile Include="Assets\MulticolorTileset.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="GameModel\VisibilityMap.cs" />
+    <Compile Include="App\Hotkeys.cs" />
+    <Compile Include="Ai\AiPlayer.cs" />
+    <Compile Include="Ai\LibAi.cs" />
+    <Compile Include="Player\AssetCommand.cs" />
+    <Compile Include="Player\Capabilities\ActivatedPlayerCapability.cs" />
+    <Compile Include="Player\Capabilities\Basic\Attack.cs" />
+    <Compile Include="Player\Capabilities\Basic\Cancel.cs" />
+    <Compile Include="Player\Capabilities\Basic\Convey.cs" />
+    <Compile Include="Player\Capabilities\Basic\MineHarvest.cs" />
+    <Compile Include="Player\Capabilities\Basic\Move.cs" />
+    <Compile Include="Player\Capabilities\Basic\Patrol.cs" />
+    <Compile Include="Player\Capabilities\Basic\Repair.cs" />
+    <Compile Include="Player\Capabilities\Basic\StandGround.cs" />
+    <Compile Include="Player\Capabilities\Build\Build.cs" />
+    <Compile Include="Player\Capabilities\PlayerCapability.cs" />
+    <Compile Include="Player\Capabilities\Basic\Shelter.cs" />
+    <Compile Include="Player\Capabilities\Basic\Unshelter.cs" />
+    <Compile Include="Player\Capabilities\Train\Train.cs" />
+    <Compile Include="Player\Capabilities\Upgrade\Building.cs" />
+    <Compile Include="Player\Capabilities\Upgrade\Knight.cs" />
+    <Compile Include="Player\Capabilities\Upgrade\Ranger.cs" />
+    <Compile Include="Player\Capabilities\Upgrade\Unit.cs" />
+    <Compile Include="Player\PlayerAsset.cs" />
+    <Compile Include="Player\PlayerAssetData.cs" />
+    <Compile Include="Player\PlayerUpgrade.cs" />
+    <Compile Include="Player\Position.cs" />
+    <Compile Include="Assets\RecolorMap.cs" />
+    <Compile Include="Assets\TerrainMap.cs" />
+    <Compile Include="Audio\AudioManager.cs" />
+    <Compile Include="Assets\Tileset.cs" />
+    <Compile Include="Extensions\BitmapExtensions.cs" />
+    <Compile Include="App\Data.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Extensions\DirectionExtensions.cs" />
+    <Compile Include="Extensions\SpriteBatchExtensions.cs" />
+    <Compile Include="GameModel\GameModel.cs" />
+    <Compile Include="GameModel\PlayerData.cs" />
+    <Compile Include="GameModel\RouterMap.cs" />
+    <Compile Include="Renderers\AssetRenderer.cs" />
+    <Compile Include="Renderers\ButtonRenderer.cs" />
+    <Compile Include="Renderers\FogRenderer.cs" />
+    <Compile Include="Renderers\ListViewRenderer.cs" />
+    <Compile Include="Renderers\MapRenderer.cs" />
+    <Compile Include="Renderers\MiniMapRenderer.cs" />
+    <Compile Include="Renderers\PixelType.cs" />
+    <Compile Include="Renderers\ResourceRenderer.cs" />
+    <Compile Include="Renderers\SoundEventRenderer.cs" />
+    <Compile Include="Renderers\TextFieldRenderer.cs" />
+    <Compile Include="Renderers\UnitActionRenderer.cs" />
+    <Compile Include="Renderers\UnitDescriptionRenderer.cs" />
+    <Compile Include="Renderers\ViewportRenderer.cs" />
+    <Compile Include="Screens\Base\ButtonMenuScreen.cs" />
+    <Compile Include="Screens\Base\ButtonScreen.cs" />
+    <Compile Include="Screens\Base\GameOverlay.cs" />
+    <Compile Include="Screens\Base\GameScreen.cs" />
+    <Compile Include="Screens\Base\OptionsScreen.cs" />
+    <Compile Include="Screens\Components\Bevel.cs" />
+    <Compile Include="Screens\Components\Button.cs" />
+    <Compile Include="Screens\Components\TextField.cs" />
+    <Compile Include="Screens\FpsOverlay.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\Manager\InputState.cs" />
+    <Compile Include="Screens\Manager\ScreenManager.cs" />
+    <Compile Include="Player\PlayerCommandRequest.cs" />
+    <Compile Include="Screens\MapSelectionScreen.cs" />
+    <Compile Include="Screens\MultiPlayerMenuScreen.cs" />
+    <Compile Include="Screens\OptionsMenuScreen.cs" />
+    <Compile Include="Screens\InGameMenuScreen.cs" />
+    <Compile Include="Screens\PlayerAiColorSelectScreen.cs" />
+    <Compile Include="Screens\SoundOptionsScreen.cs" />
+    <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Screens\TestScreen.cs" />
+    <Compile Include="Util\Paths.cs" />
+    <Compile Include="Util\RandomNumberGenerator.cs" />
+    <Compile Include="Util\TraceFileLogger.cs" />
+    <Compile Include="Warcraft.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FluidSynthWrapper">
+      <HintPath>..\lib\FluidSynthWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=10.3.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.3.0\lib\net\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fluidsynth.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="FodyWeavers.xml" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LuaSharp\LuaSharp.csproj">
+      <Project>{f1c630d6-3520-4dec-8b5e-298b66b12136}</Project>
+      <Name>LuaSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <UsingTask TaskName="CosturaCleanup" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Config Output="false" Required="true" ParameterType="Microsoft.Build.Framework.ITaskItem" />
+      <Files Output="false" Required="true" ParameterType="Microsoft.Build.Framework.ITaskItem[]" />
+    </ParameterGroup>
+    <Task Evaluate="true">
+      <Reference xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Include="System.Xml" />
+      <Reference xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Include="System.Xml.Linq" />
+      <Using xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Namespace="System" />
+      <Using xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Namespace="System.IO" />
+      <Using xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Namespace="System.Xml.Linq" />
+      <Code xmlns="http://schemas.microsoft.com/developer/msbuild/2003" Type="Fragment" Language="cs"><![CDATA[
+var config = XElement.Load(Config.ItemSpec).Elements("Costura").FirstOrDefault();
+
+if (config == null) return true;
+
+var excludedAssemblies = new List<string>();
+var attribute = config.Attribute("ExcludeAssemblies");
+if (attribute != null)
+    foreach (var item in attribute.Value.Split('|').Select(x => x.Trim()).Where(x => x != string.Empty))
+        excludedAssemblies.Add(item);
+var element = config.Element("ExcludeAssemblies");
+if (element != null)
+    foreach (var item in element.Value.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim()).Where(x => x != string.Empty))
+        excludedAssemblies.Add(item);
+
+var filesToCleanup = Files.Select(f => f.ItemSpec).Where(f => !excludedAssemblies.Contains(Path.GetFileNameWithoutExtension(f), StringComparer.InvariantCultureIgnoreCase));
+
+foreach (var item in filesToCleanup)
+  File.Delete(item);
+]]></Code>
+    </Task>
+  </UsingTask>
+  <Target Name="CleanReferenceCopyLocalPaths" AfterTargets="AfterBuild;NonWinFodyTarget">
+    <CosturaCleanup Config="FodyWeavers.xml" Files="@(ReferenceCopyLocalPaths->'$(OutDir)%(DestinationSubDirectory)%(Filename)%(Extension)')" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>%25systemroot%25\System32\xcopy "$(SolutionDir)data" "$(TargetDir)data\" /D /Y /E</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Fody.1.29.4\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.1.29.4\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.1.29.4\build\dotnet\Fody.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
